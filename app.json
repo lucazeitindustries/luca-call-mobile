@@ -16,7 +16,11 @@
       "bundleIdentifier": "com.zeitindustries.lucacall",
       "infoPlist": {
         "NSMicrophoneUsageDescription": "Luca Call needs microphone access for voice conversations with your AI assistant.",
-        "UIBackgroundModes": ["audio"]
+        "UIBackgroundModes": [
+          "audio",
+          "audio"
+        ],
+        "ITSAppUsesNonExemptEncryption": false
       }
     },
     "android": {
@@ -25,7 +29,11 @@
         "backgroundColor": "#0a0a0a"
       },
       "package": "com.zeitindustries.lucacall",
-      "permissions": ["RECORD_AUDIO"]
+      "permissions": [
+        "RECORD_AUDIO",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS"
+      ]
     },
     "plugins": [
       [
@@ -34,6 +42,12 @@
           "microphonePermission": "Luca Call needs microphone access for voice conversations."
         }
       ]
-    ]
+    ],
+    "extra": {
+      "eas": {
+        "projectId": "7560056c-d151-4697-8929-5fa02c67caa0"
+      }
+    },
+    "owner": "lucazeitindustries"
   }
 }
